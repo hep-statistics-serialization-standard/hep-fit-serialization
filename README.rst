@@ -6,7 +6,7 @@ Goal
 ====
 HEP-fit-serialization standardizes the machine- and human-readable serialization of
 all components involved in model fitting as used in High Energy Physics. This includes
- the definition of the model, the data as well as the loss function.
+the definition of the model, the data as well as the loss function.
 The aim is to provide on one hand a language and
 framework agnostic, machine-reabable and on the other hand a
 human-readable, publishable and preservable representation. This would allow to interchange
