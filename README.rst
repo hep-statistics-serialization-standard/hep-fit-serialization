@@ -43,16 +43,23 @@ Involved projects
 
 zfit
 ----
-`zfit <https://github.com/zfit/zfit>`_ is a model fitting library in pure Python. It's
+A model fitting library in pure Python. It's
 focus is on customizability and strong model building.
+
+`zfit on Github <https://github.com/zfit/zfit>`_
 
 pyhf
 ----
-TODO?
+Pure-Python implementation of statistical model for multi-bin histogram-based analysis and its interval estimation;
+HistFactory in Python.
+
+`pyhf on Github <https://github.com/scikit-hep/pyhf>`_
 
 RooFit
 ------
-TODO?
+The Toolkit for Data Modeling with ROOT (RooFit) is a package that allows for modeling probability distributions in a compact and abstract way.
+
+`RooFit <https://root.cern.ch/roofit>`_
 
 Committee
 =========
