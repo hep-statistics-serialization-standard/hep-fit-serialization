@@ -1,0 +1,18 @@
+name: single_brem
+model:
+  type: doublecb
+  yield: "VAR 10000 0 1000000"
+  obs: 'B_DTF_PVandJpsi_M_flat'
+  norm_range:
+    low: 4500
+    high: 6000.
+  parameters:
+    mu: "VAR 5279 5250 5300"
+    sigma1: "VAR 14.53 2 100"
+    alpha1: "VAR 1.097 0.001 4"
+    n1: "VAR 1.73 0.00001 150"
+    sigma2: "VAR 14.53 2 100"
+    alpha2: "VAR -1.097 -4 -0.001"
+    n2: "VAR 1.73 0.00001 150"
+    frac: "VAR 0.5 0 1"
+
