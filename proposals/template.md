@@ -1,9 +1,9 @@
 # Proposal name
 
-Tags: {structure, meta, binned, unbinned, data, loss, etc.}
-Status: planning (approved, or whatever fits well)
-Authors: John Doe (please add yourself if you contribute to the proposal and feel as a co-author)
-Supporter: Johanna Doe (who supports this proposal actively but does not contribute)
+Tags: {structure, meta, binned, unbinned, data, loss, etc.}  
+Status: planning (approved, or whatever fits well)  
+Authors: John Doe (please add yourself if you contribute to the proposal and feel as a co-author)  
+Supporter: Johanna Doe (in favour of this proposal but does not directly contribute)  
 
 
 ## Idea

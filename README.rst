@@ -2,6 +2,8 @@
 HEP fit serialization standard
 ******************************
 
+**Everything, including naming, folder structure etc is under construction and open to discussion**
+
 Goal
 ====
 HEP-fit-serialization standardizes the machine- and human-readable serialization of
@@ -30,7 +32,7 @@ Participation
 =============
 
 In order to submit ideas, proposals and examples, you can either start a discussion using issues or
-add the document(s), if you have some, in the 'standard' folder and create a PR to discussion them.
+add the document(s), if you have some, in the proposals (draft or pending) folder and create a PR to discussion them.
 
 If you are interest to become part of the core committee, please open an issue. Anyone is allowed to join.
 
