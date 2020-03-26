@@ -1,0 +1,47 @@
+variables:
+  mes:
+    value: 5.25
+    min: 5.2
+    max: 5.3
+  sigmean:
+    value: 5.28
+    min: 5.2
+    max: 5.3
+  sigwidth:
+    value: 0.0027
+    min: 0.001
+    max: 1
+  argpar:
+    value: -20
+    min: -100
+    max: -1
+  nsig:
+    value: 200
+    min: 0
+    max: 10000
+  nbkg:
+    value: 800
+    min: 0
+    max: 10000
+pdfs:
+  signal:
+    type: Gaussian
+    x: mes
+    mean: sigmean
+    sigma: sigwidth
+  background:
+    type: ARGUS
+    mass: mes
+    resonance: 5.291
+    slope: argpar
+    power: 0.5
+  model:
+    type: pdfsum
+    summands:
+      - signal
+      - background
+    coefficients:
+      - nsig
+      - nbkg
+    dict:
+      toplevel: 1
