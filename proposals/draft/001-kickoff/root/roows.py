@@ -25,7 +25,10 @@ elif infile.endswith(".root"):
         if k.GetClassName() == "RooWorkspace":
             ws = k.ReadObj()
             break
-    tool = ROOT.RooJSONFactoryWSTool(ws)        
+    tool = ROOT.RooJSONFactoryWSTool(ws)
+else:
+    print("unknown file type "+infile)
+    exit(0)
     
 ws.Print("t")
 
@@ -41,5 +44,6 @@ tool2.importJSON("ws.js")
 ws2.Print("t")
 
 print("reexporting now")
+tool2.exportYML("test.yml")
 tool2.exportJSON("test.js")
 
