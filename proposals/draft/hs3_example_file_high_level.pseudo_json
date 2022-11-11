@@ -1,0 +1,64 @@
+{
+  "distributions": {  # Optional, required for most things
+     "dist_over_main_data": some_parameterized_dist,
+     "dist_over_aux_data1": some_parameterized_dist,
+     "dist_over_aux_data2": some_parameterized_dist,
+     "dist_over_parameters": {
+        type: "product_distribution"
+        marginals: {
+           param_a: "Normal(...)"
+           param_b: "Uniform(...)"
+        }
+    }
+  },
+
+  "observations": {  # Optional, required for inference
+     "main_data": ...,
+     "aux_data_1": ...,
+     "aux_data_2": ...
+  },
+
+  "likelihoods": {  # Optional, required for inference
+    "main_likelihood": {"dist": "dist_over_main_data", "obs": "main_data"},
+    "aux_likelihood_1": {"dist": "dist_over_aux_data1", "obs": "aux_data_1"},
+    "aux_likelihood_2": {"dist": "dist_over_aux_data2", "obs": "aux_data_2"}
+  },
+
+  "domains": {  # Optional, required for engines that need domain information
+    "default_domain": {
+      {
+          "type": "product_domain",
+          "param_a": {"min" = ..., "max" = ...},
+          "param_b": {"min" = ..., "max" = ...},
+          "param_c": some_fixed_value
+      }
+    },
+    "alternative_domain": ...
+  },
+
+  "estimates": {  # Optional, required for operations that need starting values
+    "param_snapshot_1": {"a": ..., "b": ..., "c": ...},
+    "param_snapshot_2": {"a": ..., "b": ..., "c": ...}
+  }
+
+  "priors": {  # Optional, required for Bayesian operations
+    "default_prior": "dist_over_parameters"
+    "alternative_prior": ...
+  },
+
+  "analyses": {  # Required for automatic plots, Frequentist hypothesis testing, etc.
+    "primary_analysis": {
+       "likelihoods": ["main_likelihood", "aux_likelihood_1"],
+       "poi": ["a", "b"]
+    },
+    "background_analysis": {
+       "likelihoods": ["main_likelihood", "aux_likelihood_*"],  # Allow "*" as wildcard
+       "poi": ["a", "c"]
+    }
+  }
+
+  "metadata": { # Optional, content not specified in standard
+     "roofit": ...
+     "bat": ...
+  }
+}
