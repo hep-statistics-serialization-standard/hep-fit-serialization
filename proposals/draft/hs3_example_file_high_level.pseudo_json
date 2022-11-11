@@ -49,11 +49,13 @@
   "analyses": {  # Required for automatic plots, Frequentist hypothesis testing, etc.
     "primary_analysis": {
        "likelihoods": ["main_likelihood", "aux_likelihood_1"],
-       "poi": ["a", "b"]
+       "poi": ["a", "b"],
+       "prior": "default_prior"  # Optional, required for Bayesian operations
     },
     "background_analysis": {
        "likelihoods": ["main_likelihood", "aux_likelihood_*"],  # Allow "*" as wildcard
-       "poi": ["a", "c"]
+       "poi": ["a", "c"],
+       "prior": "default_prior"  # Optional, required for Bayesian operations
     }
   }
 
